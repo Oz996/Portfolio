@@ -1,0 +1,14 @@
+@use "./colors" as *;
+
+.btn {
+  background-color: $primary-purple;
+  color: #fff;
+  min-width: 7.5rem;
+  min-height: 3rem;
+}
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+  outline: 1px solid black;
+  transition: 0.3s;
+}
