@@ -11,7 +11,7 @@ export const DarkThemeContextProvider = ({ children }) => {
     text: "#222",
     ui: "#fff",
     bg: "#121212",
-    bg2: "#000"
+    bg2: "#161616"
   };
 
   const theme = darkTheme ? dark :""

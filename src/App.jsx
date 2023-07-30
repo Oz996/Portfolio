@@ -4,16 +4,19 @@ import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import NotFound from "./pages/NotFound";
 import Clones from "./pages/Clones";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { DarkThemeContext } from "./context/DarkThemeContext";
 
 const App = () => {
   const { theme } = useContext(DarkThemeContext);
+  document.body.style.background = theme
+  useEffect(() => {
+    document.body.style.background = theme.bg;
+  }, [theme]);
 
   return (
     <div
       style={{
-        background: theme.bg,
         color: theme.ui,
       }}
     >
