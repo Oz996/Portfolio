@@ -2,61 +2,77 @@
   "projects": [
     {
       "title": "Audiophile",
-      "description": "(In development) A challenge from frontend-mentor. Built after the template. Styled with sass using mixins based on the figma sketch.",
+      "description": "(In development) A frontend-mentor challenge. Ecommerce. State handled with React-query and Zustand. Styled with sass using mixins based on the figma sketch.",
       "image": "./audiophile.png",
       "link": "https://audiophile-bice.vercel.app",
-      "github": "https://github.com/Oz996/Audiophile"
+      "github": "https://github.com/Oz996/Audiophile",
+      "extralink": "https://www.frontendmentor.io/challenges/audiophile-ecommerce-website-C8cuSd_wx"
     },
     {
       "title": "Pokemon",
       "description": "(Incomplete) Pokemon index. Search or browse pokemons and view details for each pokemon. Connected to the pokeapi API. State handled with React-query and styled with Tailwind",
       "image": "./pokemon.png",
       "link": "https://zesty-puppy-0dca00.netlify.app",
-      "github": "https://github.com/Oz996/Pokemons"
+      "github": "https://github.com/Oz996/Pokemons",
+      "extralink": ""
     },
     {
       "title": "Bmerketo CMS",
       "description": "A CMS website for a fake company. You can add, edit, delete products and edit the status on placed orders. Backend built with Nodejs(Express) and connected to mongoDB, full CRUD. Routes are restricted unless logged in. Login handled with Nodejs",
       "image": "./bmerketo2.png",
       "link": "https://bmerketo-cms.onrender.com",
-      "github": "https://github.com/Oz996/bmerketo-cms"
+      "github": "https://github.com/Oz996/bmerketo-cms",
+      "extralink": ""
     },
     {
       "title": "Baked",
       "description": "Ecommerce website. Add products to cart and proceed to checkout if logged in. Search and filter products. Data is stored using JSON-server and state handled with Redux-toolkit. Login/registration built with Firebase",
       "image": "./baked.png",
       "link": "https://baked-2cfx.onrender.com",
-      "github": "https://github.com/Oz996/Baked"
+      "github": "https://github.com/Oz996/Baked",
+      "extralink": ""
     },
     {
       "title": "Movies",
       "description": "Movie database connected to the OMDb API. Search and view details of movies/shows. State handled with Redux-toolkit and styled with Tailwind. You can login/register through Auth0. The API was very strict and only allowed searches, no filtering or categorizing was possible",
       "image": "./movies.png",
       "link": "https://main--cosmic-sable-8ec2d2.netlify.app",
-      "github": "https://github.com/Oz996/Movies"
+      "github": "https://github.com/Oz996/Movies",
+      "extralink": ""
     },
     {
       "title": "Blogs",
       "description": "Create, edit or delete your posts. Bearer token authentication and storing token on client-side. Backend built with Nodejs(Express) and connected to mongoDB. Styled with Bootstrap. Login/registration handled with Nodejs",
       "image": "./blogs.png",
       "link": "https://blogs-e9qa.onrender.com",
-      "github": "https://github.com/Oz996/Blog"
+      "github": "https://github.com/Oz996/Blog",
+      "extralink": ""
     }
   ],
   "clones": [
+    {
+      "title": "Easybank",
+      "description": "A frontend-mentor challenge. A landing page for Easybank. Animations and mixins with sass and some javascript",
+      "image": "/easybank.png",
+      "link": "https://easybank-css.vercel.app",
+      "github": "https://github.com/Oz996/Easybank-css",
+      "extralink": ""
+    },
+    {
+      "title": "Newsletter sign-up form",
+      "description": "A frontend-mentor challenge. Responsive sign up form with email validation. Styled with Tailwind",
+      "image": "./newsletter.png",
+      "link": "https://inquisitive-peony-5feb99.netlify.app",
+      "github": "https://github.com/Oz996/Newsletter-sign-up-form-FM-",
+      "extralink": "https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv"
+    },
     {
       "title": "Google",
       "description": "Simple Google clone styled with Bootstrap/react-bootstrap",
       "image": "./google.png",
       "link": "https://capable-dusk-43ca4a.netlify.app",
-      "github": "https://github.com/Oz996/Bootstrap-google"
-    },
-    {
-      "title": "Newsletter sign-up form",
-      "description": "A challenge from frontend-mentor. A responsive sign up form with email validation. Styled with Tailwind",
-      "image": "./newsletter.png",
-      "link": "https://inquisitive-peony-5feb99.netlify.app",
-      "github": "https://github.com/Oz996/Newsletter-sign-up-form-FM-"
+      "github": "https://github.com/Oz996/Bootstrap-google",
+      "extralink": ""
     }
   ],
   "template": {

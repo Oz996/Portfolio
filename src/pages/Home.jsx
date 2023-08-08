@@ -21,7 +21,7 @@ const Home = () => {
           </p>
           <div className="flex gap-1 justify-start items-end w-7/12 cursor-pointer fade-in">
             <Link
-              to="https://github.com/Oz996?tab=repositories"
+              to="https://github.com/Oz996/Portfolio"
               target="_blank"
               rel="noopener noreferrer"
               className="text-purple-400 hover:underline flex gap-1"
