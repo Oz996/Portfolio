@@ -18,7 +18,7 @@
     },
     {
       "title": "Bmerketo CMS",
-      "description": "A CMS website for a fake company. You can add, edit, delete products and edit the status on placed orders. Backend built with Nodejs(Express) and connected to mongoDB, full CRUD. Routes are restricted unless logged in. Login handled with Nodejs",
+      "description": "A CMS website for a fake company. You can add, edit, delete products and change the status on placed orders. Backend built with Nodejs(Express) and connected to mongoDB, full CRUD. Routes are restricted unless logged in. Login handled with Nodejs",
       "image": "./bmerketo2.png",
       "link": "https://bmerketo-cms.onrender.com",
       "github": "https://github.com/Oz996/bmerketo-cms",

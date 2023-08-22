@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const CloneCard = ({ clone }) => {
   return (
-    <article className="border rounded h-[28rem] grid grid-rows-3 shadow-2xl">
+    <article className="border rounded w-[19rem] h-[28rem] grid grid-rows-3 shadow-2xl mx-auto">
       <figure>
         <img src={clone.image} alt={clone.title} />
       </figure>
@@ -16,7 +16,7 @@ const CloneCard = ({ clone }) => {
           to={clone.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="p-2 w-[6.5rem] bg-gray-500 rounded-sm text-white text-center hover:bg-gray-600 transition-all duration-300"
+          className="p-2 w-[6.5rem] bg-gray-600 rounded-sm text-white text-center hover:bg-gray-500 transition-all duration-300"
         >
           Visit
         </Link>
@@ -24,7 +24,7 @@ const CloneCard = ({ clone }) => {
           to={clone.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-center gap-1 p-2 px-4 bg-gray-500 rounded-sm text-white hover:bg-gray-600 transition-all duration-300"
+          className="flex items-center gap-1 p-2 px-4 bg-gray-600 rounded-sm text-white hover:bg-gray-500 transition-all duration-300"
         >
           <BsGithub size={18} />
           Github

@@ -20,7 +20,7 @@ const Projects = () => {
         <img src={scss} alt="scss-logo" className="w-12" />
         <img src={tailwind} alt="tailwind-logo" className="w-12" />
       </div>
-      <div className="grid grid-cols-3 gap-10 mt-10 max-sm:grid-cols-1 slide-up">
+      <div className="grid grid-cols-3 gap-10 mt-10 max-md:flex max-md:flex-col max-xl:grid-cols-2 slide-up">
         {projectsData.projects.map((project, index) => (
           <ProjectCard key={index} project={project} />
         ))}

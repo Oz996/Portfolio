@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const ProjectCard = ({ project }) => {
   return (
-    <article className="w-[21rem] h-[35rem] bg-slate-800 rounded-xl shadow-xl shadow-black grid grid-rows-3">
+    <article className="w-[21rem] h-[35rem] bg-slate-800 rounded-xl shadow-xl shadow-black grid grid-rows-3 mx-auto">
       <figure className="w-[18rem] mx-auto my-5">
         <img
           src={project.image}

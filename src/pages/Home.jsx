@@ -4,10 +4,12 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <main className="flex w-8/12 mx-auto max-sm:flex-col max-sm:w-11/12 max-sm:mx-5 duration-200">
+    <main className="flex w-8/12 mx-auto max-sm:w-11/12 max-sm:mx-5 duration-200 max-sm:flex-col-reverse">
       <div className="flex flex-col h-[46rem] justify-center">
         <div className="flex flex-col justify-center">
-          <h1 className="text-7xl font-semibold mb-6 max-sm:text-5xl slide-left">Özgün Güven</h1>
+          <h1 className="text-7xl font-semibold mb-6 max-sm:text-5xl slide-left max-sm:mt-[-20vh]">
+            Özgün Güven
+          </h1>
           <h2 className="text-3xl font-bold text-purple-400 slide-left">
             Frontend Developer
           </h2>
@@ -40,7 +42,7 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <div className="w-3/12 mt-[10rem] ml-[10rem] text-cyan-400 max-sm:hidden">
+      <div className="w-3/12 mt-[10rem] ml-[11vw] text-cyan-400 max-sm:mx-auto max-sm:my-0 max-sm:ml-0">
         <FaReact size={400} className="rotate" />
       </div>
     </main>
