@@ -21,6 +21,7 @@ const Footer = () => {
             to="https://www.linkedin.com/in/özgun-güven-54653524a/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Link to my LinkedIn acccount"
           >
             <AiFillLinkedin
               size={20}
@@ -31,6 +32,7 @@ const Footer = () => {
             to="https://github.com/Oz996?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Link to my Github account"
           >
             <BsGithub
               size={19}
@@ -40,21 +42,15 @@ const Footer = () => {
         </div>
         <div>
           <ul className="flex gap-4 text-sm">
-            <Link to="/">
-              <li className="hover:underline text-purple-400 hover:text-purple-400">
-                Home
-              </li>
-            </Link>
-            <Link to="projects">
-              <li className="hover:underline text-purple-400 hover:text-purple-400">
-                Projects
-              </li>
-            </Link>
-            <Link to="clones">
-              <li className="hover:underline text-purple-400 hover:text-purple-400">
-                Clones
-              </li>
-            </Link>
+            <li className="hover:underline text-purple-400 hover:text-purple-400">
+              <Link to="/">Home</Link>
+            </li>
+            <li className="hover:underline text-purple-400 hover:text-purple-400">
+              <Link to="projects">Projects</Link>
+            </li>
+            <li className="hover:underline text-purple-400 hover:text-purple-400">
+              <Link to="clones">Clones</Link>
+            </li>
           </ul>
         </div>
       </div>
