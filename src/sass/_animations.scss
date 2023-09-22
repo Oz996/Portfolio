@@ -1,5 +1,5 @@
-// Animations
 
+// Animations
 @keyframes slide-in-left {
   from {
     transform: translateX(-30%);
@@ -46,8 +46,8 @@
     transform: rotate(360deg);
   }
 }
-// Classes
 
+// Classes
 .slide-left {
   animation: slide-in-left 1.5s ease;
 }

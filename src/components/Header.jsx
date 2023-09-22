@@ -2,10 +2,23 @@ import { useContext } from "react";
 import { BsFillMoonFill, BsSunFill } from "react-icons/bs";
 import { Outlet, NavLink } from "react-router-dom";
 import { DarkThemeContext } from "../context/DarkThemeContext";
-import Footer from "./Footer";
+import { useAuth } from "../hooks/useAuth";
+import { getAuth, signOut } from "firebase/auth";
 
 const Header = () => {
   const { darkTheme, setDarkTheme } = useContext(DarkThemeContext);
+  const { isLoggedIn, signOutUser } = useAuth();
+
+  const handleLogout = () => {
+    const auth = getAuth();
+    signOut(auth)
+      .then(() => {
+        signOutUser();
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
   return (
     <>
       <nav className="border-b border-gray-300 py-5 h-16">
@@ -25,6 +38,24 @@ const Header = () => {
             </NavLink>
           </div>
           <div>
+            {!isLoggedIn ? (
+              <NavLink
+                className="bg-purple-300 p-2 px-4 rounded hover:bg-purple-200 duration-300"
+                to="/login"
+              >
+                Login
+              </NavLink>
+            ) : (
+              <span
+                className="bg-purple-300 p-2 px-4 rounded hover:bg-purple-200 duration-300 cursor-pointer"
+                to="/login"
+                onClick={handleLogout}
+              >
+                Logout
+              </span>
+            )}
+          </div>
+          <div className="ml-3">
             {!darkTheme ? (
               <BsSunFill
                 onClick={() => setDarkTheme(true)}
@@ -41,7 +72,7 @@ const Header = () => {
           </div>
         </div>
       </nav>
-      <Footer />
+      {/* <Footer /> */}
       <Outlet />
     </>
   );

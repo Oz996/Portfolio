@@ -1,3 +1,4 @@
+import { AiFillLinkedin } from "react-icons/ai";
 import { BsGithub } from "react-icons/bs";
 import { FaReact } from "react-icons/fa";
 import { Link } from "react-router-dom";
@@ -5,7 +6,7 @@ import { Link } from "react-router-dom";
 const Home = () => {
   return (
     <main className="flex w-8/12 mx-auto max-sm:w-11/12 max-sm:mx-5 duration-200 max-sm:flex-col-reverse">
-      <div className="flex flex-col h-[46rem] justify-center">
+      <div className="flex flex-col h-[53rem] justify-center">
         <div className="flex flex-col justify-center">
           <h1 className="text-7xl font-semibold mb-6 max-sm:text-5xl slide-left max-sm:mt-[-20vh]">
             Özgün Güven
@@ -35,10 +36,39 @@ const Home = () => {
         </div>
         <div className="flex gap-5 justify-start mt-10 max-sm:mx-auto fade-in-slow">
           <Link to="/projects">
-            <button className="btn rounded font-semibold">Projects</button>
+            <button className="btn bg-purple-400 rounded font-semibold">
+              Projects
+            </button>
           </Link>
           <Link to="/clones">
             <button className="btn rounded font-semibold">Clones</button>
+          </Link>
+        </div>
+        <p className="my-5">
+          Contact me at: <b> nguven996@gmail.com</b>
+        </p>
+        <div className="flex gap-3">
+          <Link
+            to="https://www.linkedin.com/in/özgun-güven-54653524a/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to my LinkedIn acccount"
+          >
+            <AiFillLinkedin
+              size={20}
+              className="hover:text-purple-400 hover:translate-x-[2px] hover:translate-y-[-1px] duration-300"
+            />
+          </Link>
+          <Link
+            to="https://github.com/Oz996?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Link to my Github account"
+          >
+            <BsGithub
+              size={19}
+              className="hover:text-purple-400 hover:translate-x-[2px] hover:translate-y-[-1px] duration-300"
+            />
           </Link>
         </div>
       </div>
