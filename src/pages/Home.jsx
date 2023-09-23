@@ -44,10 +44,10 @@ const Home = () => {
             <button className="btn rounded font-semibold">Clones</button>
           </Link>
         </div>
-        <p className="my-5">
+        <p className="my-5 fade-in-slow">
           Contact me at: <b> nguven996@gmail.com</b>
         </p>
-        <div className="flex gap-3">
+        <div className="flex gap-3 fade-in-slow">
           <Link
             to="https://www.linkedin.com/in/özgun-güven-54653524a/"
             target="_blank"

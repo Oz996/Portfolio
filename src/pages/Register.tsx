@@ -6,6 +6,7 @@ import {
 } from "firebase/auth";
 import { auth } from "../firebase";
 import { Link, useNavigate } from "react-router-dom";
+import Loader from "../utils/Loader/Loader";
 
 const Register = () => {
   const initialState = {
@@ -45,7 +46,6 @@ const Register = () => {
       return;
     } else {
       setIsLoading(true);
-
       createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
           const user = userCredential.user;
@@ -61,7 +61,7 @@ const Register = () => {
           setIsLoading(false);
           setTimeout(() => {
             setError(null);
-          }, 2000);
+          }, 3000);
         });
     }
   };
@@ -125,6 +125,7 @@ const Register = () => {
             className={`bg-blue-500 hover:bg-blue-400 mt-5 p-3 text-white duration-200 
           }`}
           >
+            {isLoading && <Loader />}
             Register
           </button>
           <p className="mt-10 text-center text-gray-400">

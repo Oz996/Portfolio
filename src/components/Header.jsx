@@ -40,14 +40,14 @@ const Header = () => {
           <div>
             {!isLoggedIn ? (
               <NavLink
-                className="bg-purple-300 p-2 px-4 rounded hover:bg-purple-200 duration-300"
+                className="bg-purple-400 p-2 px-4 rounded hover:bg-purple-300 duration-300 text-white"
                 to="/login"
               >
                 Login
               </NavLink>
             ) : (
               <span
-                className="bg-purple-300 p-2 px-4 rounded hover:bg-purple-200 duration-300 cursor-pointer"
+                className="bg-purple-400 p-2 px-4 rounded hover:bg-purple-300 duration-300 text-white cursor-pointer"
                 to="/login"
                 onClick={handleLogout}
               >

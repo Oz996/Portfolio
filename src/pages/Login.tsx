@@ -3,6 +3,7 @@ import { AuthError, signInWithEmailAndPassword } from "firebase/auth";
 import React, { ChangeEvent, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
+import Loader from "../utils/Loader/Loader";
 
 const Login = () => {
   const initialState = {
@@ -35,19 +36,18 @@ const Login = () => {
       setError("Please fill in all fields");
       return;
     }
-
     setIsLoading(true);
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        signIn(user.displayName)
+        signIn(user.displayName);
         navigate("/");
       })
       .catch((error: AuthError) => {
         setError(error.message);
         setTimeout(() => {
           setError(null);
-        }, 2000);
+        }, 3000);
       })
       .finally(() => {
         setIsLoading(false);
@@ -84,9 +84,11 @@ const Login = () => {
           <p className="text-red-500">{error}</p>
           <button
             type="submit"
+            disabled={isLoading}
             className={`bg-blue-500 hover:bg-blue-400 mt-5 p-3 text-white duration-200 
           }`}
           >
+            {isLoading && <Loader/>}
             Login
           </button>
           <p className="mt-10 text-center text-gray-400">

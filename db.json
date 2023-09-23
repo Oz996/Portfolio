@@ -2,7 +2,7 @@
   "projects": [
     {
       "title": "Audiophile",
-      "description": "(In development) A frontend-mentor challenge. Ecommerce. State handled with React-query and Zustand. Styled with sass using mixins based on the figma sketch.",
+      "description": "A frontend-mentor challenge. Ecommerce. State handled with React-query and Zustand. Styled with sass using mixins based on the figma sketch.",
       "image": "./audiophile.png",
       "link": "https://audiophile-bice.vercel.app",
       "github": "https://github.com/Oz996/Audiophile",
@@ -10,7 +10,7 @@
     },
     {
       "title": "Pokemon",
-      "description": "(Incomplete) Pokemon index. Search or browse pokemons and view details for each pokemon. Connected to the pokeapi API. State handled with React-query and styled with Tailwind",
+      "description": "Pokemon index. Browse pokemons and view details for each pokemon. Connected to the pokeapi API. State handled with React-query and styled with Tailwind",
       "image": "./pokemon.png",
       "link": "https://zesty-puppy-0dca00.netlify.app",
       "github": "https://github.com/Oz996/Pokemons",
@@ -18,7 +18,7 @@
     },
     {
       "title": "Bmerketo CMS",
-      "description": "A CMS website for a fake company. You can add, edit, delete products and change the status on placed orders. Backend built with Nodejs(Express) and connected to mongoDB, full CRUD. Routes are restricted unless logged in. Login handled with Nodejs",
+      "description": "A CMS website for a fake company. You can add, edit, delete products and change the status on placed orders. Backend built with Nodejs(Express) and connected to mongoDB, full CRUD. Routes are restricted unless logged in. Auth handled with Nodejs",
       "image": "./bmerketo2.png",
       "link": "https://bmerketo-cms.onrender.com",
       "github": "https://github.com/Oz996/bmerketo-cms",
@@ -42,7 +42,7 @@
     },
     {
       "title": "Blogs",
-      "description": "Create, edit or delete your posts. Bearer token authentication and storing token on client-side. Backend built with Nodejs(Express) and connected to mongoDB. Styled with Bootstrap. Login/registration handled with Nodejs",
+      "description": "Create, edit or delete your posts. Bearer token authentication and storing token on client-side. Backend built with Nodejs(Express) and connected to mongoDB. Styled with Bootstrap. Auth handled with Nodejs",
       "image": "./blogs.png",
       "link": "https://blogs-e9qa.onrender.com",
       "github": "https://github.com/Oz996/Blog",
