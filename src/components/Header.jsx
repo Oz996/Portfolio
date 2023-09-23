@@ -5,6 +5,7 @@ import { useAuth } from "../hooks/useAuth";
 import { getAuth, signOut } from "firebase/auth";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useTheme } from "../hooks/useTheme";
+import { toast } from "react-toastify";
 
 const Header = () => {
   const [hamburger, setHamburger] = useState(false);
@@ -57,7 +58,7 @@ const Header = () => {
         <ul
           ref={navRef}
           className={`w-8/12 mx-auto flex font-semibold ${
-            !darkTheme ? "max-sm:bg-white" :"bg-slate-950"
+            !darkTheme ? "max-sm:bg-white" : "max-sm:bg-gray-950 max-sm:border-none"
           } ${
             hamburger &&
             "max-sm:flex-col max-sm:p-5  max-sm:absolute max-sm:left-8 z-10 max-sm:w-40 rounded max-sm:shadow-lg max-sm:border max-sm:gap-2 max-sm:text-xl"
@@ -115,6 +116,7 @@ const Header = () => {
                   onClick={() => {
                     handleLogout();
                     closeNavMenu();
+                    toast("✔️ Signed out");
                   }}
                 >
                   Logout
