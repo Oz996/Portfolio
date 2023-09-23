@@ -1,9 +1,12 @@
 import { auth } from "../firebase";
 import { AuthError, signInWithEmailAndPassword } from "firebase/auth";
-import React, { ChangeEvent, useState } from "react";
+import React, { ChangeEvent, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
+import { useTheme } from "../hooks/useTheme";
 import Loader from "../utils/Loader/Loader";
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const Login = () => {
   const initialState = {
@@ -18,6 +21,7 @@ const Login = () => {
 
   const navigate = useNavigate();
   const { signIn } = useAuth();
+  const { setDarkTheme } = useTheme();
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     setFormData((data) => {
@@ -41,6 +45,7 @@ const Login = () => {
       .then((userCredential) => {
         const user = userCredential.user;
         signIn(user.displayName);
+        toast(`✔️ Welcome ${user.displayName}`);
         navigate("/");
       })
       .catch((error: AuthError) => {
@@ -53,6 +58,10 @@ const Login = () => {
         setIsLoading(false);
       });
   };
+
+  useEffect(() => {
+    setDarkTheme(false);
+  }, []);
   return (
     <section className="min-h-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-300 pt-20">
       <div className="w-[27rem] mx-auto flex flex-col gap-10 pt-20">
@@ -88,7 +97,7 @@ const Login = () => {
             className={`bg-blue-500 hover:bg-blue-400 mt-5 p-3 text-white duration-200 
           }`}
           >
-            {isLoading && <Loader/>}
+            {isLoading && <Loader />}
             Login
           </button>
           <p className="mt-10 text-center text-gray-400">

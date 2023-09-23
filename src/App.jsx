@@ -1,16 +1,17 @@
 import { Route, Routes } from "react-router-dom";
+import { useEffect } from "react";
+import { useTheme } from "./hooks/useTheme";
 import Header from "./components/Header";
 import Home from "./pages/Home";
 import Projects from "./pages/Projects";
 import NotFound from "./pages/NotFound";
 import Clones from "./pages/Clones";
-import { useContext, useEffect } from "react";
-import { DarkThemeContext } from "./context/DarkThemeContext";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
+import { ToastContainer, Zoom } from "react-toastify";
 
 const App = () => {
-  const { theme } = useContext(DarkThemeContext);
+  const { theme } = useTheme();
   document.body.style.background = theme;
   useEffect(() => {
     document.body.style.background = theme.bg;
@@ -33,6 +34,11 @@ const App = () => {
           <Route path="*" element={<NotFound />} />
         </Route>
       </Routes>
+      <ToastContainer
+        position="top-center"
+        autoClose={1500}
+        transition={Zoom}
+      />
     </main>
   );
 };

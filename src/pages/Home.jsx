@@ -34,7 +34,7 @@ const Home = () => {
             </Link>
           </div>
         </div>
-        <div className="flex gap-5 justify-start mt-10 max-sm:mx-auto fade-in-slow">
+        <div className="flex gap-5 justify-start mt-10 fade-in-slow">
           <Link to="/projects">
             <button className="btn bg-purple-400 rounded font-semibold">
               Projects
@@ -73,7 +73,7 @@ const Home = () => {
         </div>
       </div>
       <div className="w-3/12 mt-[10rem] ml-[11vw] text-cyan-400 max-sm:mx-auto max-sm:my-0 max-sm:ml-0">
-        <FaReact size={400} className="rotate" />
+        <FaReact size={400} className="rotate max-sm:w-[20rem]" />
       </div>
     </main>
   );

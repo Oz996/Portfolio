@@ -5,8 +5,6 @@ export const DarkThemeContext = createContext();
 export const DarkThemeContextProvider = ({ children }) => {
   const [darkTheme, setDarkTheme] = useState(false);
 
-  console.log(darkTheme);
-
   const dark = {
     text: "#222",
     ui: "#fff",
