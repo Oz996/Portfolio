@@ -12,7 +12,7 @@
       "title": "Forums",
       "description": "(In development) Built with Nextjs. Create, edit or delete your posts. Bearer token authentication and storing token on client-side. Backend built with Nodejs(Express) and connected to mongoDB. Styled with NextUI and Tailwind. Auth handled with Nodejs",
       "image": "./forums.png",
-      "link": "https://forums-mcx4x8f9q-nguven996-gmailcom.vercel.app",
+      "link": "https://forums-eight.vercel.app",
       "github": "https://github.com/Oz996/forums",
       "extralink": ""
     },
