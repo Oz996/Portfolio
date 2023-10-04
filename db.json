@@ -9,11 +9,11 @@
       "extralink": "https://www.frontendmentor.io/challenges/audiophile-ecommerce-website-C8cuSd_wx"
     },
     {
-      "title": "Pokemon",
-      "description": "Pokemon index. Browse pokemons and view details for each pokemon. Connected to the pokeapi API. State handled with React-query and styled with Tailwind",
-      "image": "./pokemon.png",
-      "link": "https://zesty-puppy-0dca00.netlify.app",
-      "github": "https://github.com/Oz996/Pokemons",
+      "title": "Forums",
+      "description": "(In development) Built with Nextjs. Create, edit or delete your posts. Bearer token authentication and storing token on client-side. Backend built with Nodejs(Express) and connected to mongoDB. Styled with NextUI and Tailwind. Auth handled with Nodejs",
+      "image": "./forums.png",
+      "link": "https://forums-mcx4x8f9q-nguven996-gmailcom.vercel.app",
+      "github": "https://github.com/Oz996/forums",
       "extralink": ""
     },
     {
@@ -41,11 +41,11 @@
       "extralink": ""
     },
     {
-      "title": "Blogs",
-      "description": "Create, edit or delete your posts. Bearer token authentication and storing token on client-side. Backend built with Nodejs(Express) and connected to mongoDB. Styled with Bootstrap. Auth handled with Nodejs",
-      "image": "./blogs.png",
-      "link": "https://blogs-e9qa.onrender.com",
-      "github": "https://github.com/Oz996/Blog",
+      "title": "Pokemon",
+      "description": "Pokemon index. Browse pokemons and view details for each pokemon. Connected to the pokeapi API. State handled with React-query and styled with Tailwind",
+      "image": "./pokemon.png",
+      "link": "https://zesty-puppy-0dca00.netlify.app",
+      "github": "https://github.com/Oz996/Pokemons",
       "extralink": ""
     }
   ],
