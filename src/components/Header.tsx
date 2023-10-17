@@ -11,7 +11,7 @@ const Header = () => {
   const [hamburger, setHamburger] = useState(false);
   const { darkTheme, setDarkTheme } = useTheme();
   const { isLoggedIn, signOutUser } = useAuth();
-  const navRef = useRef();
+  const navRef = useRef<HTMLUListElement | null>(null);
 
   const handleLogout = () => {
     const auth = getAuth();
@@ -30,7 +30,7 @@ const Header = () => {
 
   useEffect(() => {
     document.addEventListener("mousedown", (e) => {
-      if (navRef.current && !navRef.current.contains(e.target)) {
+      if (navRef.current && !navRef.current.contains(e.target as Node)) {
         setHamburger(false);
       }
     });
@@ -58,7 +58,9 @@ const Header = () => {
         <ul
           ref={navRef}
           className={`w-8/12 mx-auto flex font-semibold ${
-            !darkTheme ? "max-sm:bg-white" : "max-sm:bg-gray-950 max-sm:border-none"
+            !darkTheme
+              ? "max-sm:bg-white"
+              : "max-sm:bg-gray-950 max-sm:border-none"
           } ${
             hamburger &&
             "max-sm:flex-col max-sm:p-5  max-sm:absolute max-sm:left-8 z-10 max-sm:w-40 rounded max-sm:shadow-lg max-sm:border max-sm:gap-2 max-sm:text-xl"
@@ -112,7 +114,6 @@ const Header = () => {
                   className={`bg-purple-400 p-2 px-4 rounded hover:bg-purple-300 duration-300 text-white cursor-pointer max-sm:bg-inherit ${
                     !darkTheme && "max-sm:text-black"
                   } max-sm:p-0 max-sm:hover:text-purple-300 max-sm:hover:bg-inherit`}
-                  to="/login"
                   onClick={() => {
                     handleLogout();
                     closeNavMenu();
@@ -128,7 +129,7 @@ const Header = () => {
             {!darkTheme ? (
               <BsSunFill
                 onClick={() => setDarkTheme(true)}
-                size={23}
+                size={25}
                 className="cursor-pointer hover:opacity-80 duration-200"
               />
             ) : (

@@ -44,7 +44,9 @@ const Login = () => {
     signInWithEmailAndPassword(auth, email, password)
       .then((userCredential) => {
         const user = userCredential.user;
-        signIn(user.displayName);
+        if (user.displayName) {
+          signIn(user.displayName);
+        }
         toast(`✔️ Welcome ${user.displayName}`);
         navigate("/");
       })

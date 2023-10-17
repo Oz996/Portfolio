@@ -10,7 +10,7 @@ import ProjectCard from "../components/ProjectCard";
 
 const Projects = () => {
   return (
-    <section className="w-8/12 mx-auto mb-10 max-sm:w-9/12">
+    <section className="w-8/12 mx-auto mb-10 max-sm:w-full">
       <div className="flex gap-8 justify-center mt-10 max-sm:hidden fade-in">
         <img src={html} alt="html-logo" className="w-12" />
         <img src={css} alt="css-logo" className="w-12" />

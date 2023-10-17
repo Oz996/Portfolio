@@ -1,7 +1,12 @@
 import { BsGithub } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { Clone } from "../types/types";
 
-const CloneCard = ({ clone }) => {
+interface props {
+  clone: Clone;
+}
+
+const CloneCard = ({ clone }: props) => {
   return (
     <article className="border rounded w-[19rem] h-[28rem] grid grid-rows-3 shadow-2xl mx-auto">
       <figure>

@@ -12,11 +12,14 @@ import { ToastContainer, Zoom } from "react-toastify";
 
 const App = () => {
   const { theme } = useTheme();
-  document.body.style.background = theme;
-  useEffect(() => {
-    document.body.style.background = theme.bg;
-  }, [theme]);
 
+  useEffect(() => {
+    if (typeof theme === "string") {
+      document.body.style.background = theme;
+    } else {
+      document.body.style.backgroundColor = theme.bg; 
+    }
+  }, [theme]);
   return (
     <main
       style={{
