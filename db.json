@@ -10,15 +10,15 @@
     },
     {
       "title": "Forums",
-      "description": "(In development) Built with Nextjs. Create, edit or delete your posts. Bearer token authentication and storing token on client-side. Backend built with Nodejs(Express) and connected to mongoDB. Styled with NextUI and Tailwind. Auth handled with Nodejs",
+      "description": "(In development) Built with Nextjs. Create, edit or delete your posts. Bearer token authentication and storing token on client-side. Backend built with Nodejs(Express) and connected to mongoDB. Styled with NextUI and Tailwind.",
       "image": "./forums.png",
       "link": "https://forums-eight.vercel.app",
       "github": "https://github.com/Oz996/forums",
       "extralink": ""
     },
     {
-      "title": "Bmerketo CMS",
-      "description": "A CMS website for a fake company. You can add, edit, delete products and change the status on placed orders. Backend built with Nodejs(Express) and connected to mongoDB, full CRUD. Routes are restricted unless logged in. Auth handled with Nodejs",
+      "title": "Bmerketo",
+      "description": "Sign in to bmerketo CMS as an admin to add, delete or update products and orders or browse the bmerketo store as a user. Bearer token authentication and storing token on client-side. Backend built with Nodejs(Express) and connected to mongoDB",
       "image": "./bmerketo2.png",
       "link": "https://bmerketo-cms.onrender.com",
       "github": "https://github.com/Oz996/bmerketo-cms",

@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <main className="flex w-8/12 mx-auto max-sm:w-11/12 max-sm:mx-5 duration-200 max-sm:flex-col-reverse">
+    <main className="flex w-8/12 mx-auto max-sm:w-11/12 max-sm:mx-5 duration-200 max-md:flex-col-reverse">
       <div className="flex flex-col h-[53rem] justify-center">
         <div className="flex flex-col justify-center">
           <h1 className="text-7xl font-semibold mb-6 max-sm:text-5xl slide-left max-sm:mt-[-20vh]">
