@@ -10,7 +10,7 @@
     },
     {
       "title": "Forums",
-      "description": "(In development) Built with Nextjs. Create, edit or delete your posts. Bearer token authentication and storing token on client-side. Backend built with Nodejs(Express) and connected to mongoDB. Styled with NextUI and Tailwind.",
+      "description": "Built with Nextjs, prisma and mongoDB. Bearer token authentication and storing token on client-side. Styled with NextUI and Tailwind.",
       "image": "./forums.png",
       "link": "https://next-forums.vercel.app",
       "github": "https://github.com/Oz996/forums",
