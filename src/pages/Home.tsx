@@ -36,12 +36,14 @@ const Home = () => {
         </div>
         <div className="flex gap-5 justify-start mt-10 fade-in-slow">
           <Link to="/projects">
-            <button className="btn bg-purple-400 rounded font-semibold">
+            <button className="btn bg-purple-400 rounded font-semibold text-lg">
               Projects
             </button>
           </Link>
           <Link to="/clones">
-            <button className="btn rounded font-semibold">Clones</button>
+            <button className="btn rounded font-semibold text-lg">
+              Clones
+            </button>
           </Link>
         </div>
         <p className="my-5 fade-in-slow">

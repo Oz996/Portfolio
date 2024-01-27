@@ -8,7 +8,7 @@ interface props {
 
 const ProjectCard = ({ project }: props) => {
   return (
-    <article className="w-[21rem] h-[35rem] bg-slate-800 rounded-xl shadow-xl shadow-black grid grid-rows-3 mx-auto">
+    <article className="w-[21rem] h-[34rem] bg-slate-800 rounded-xl shadow-lg shadow-gray-600 grid grid-rows-3 mx-auto">
       <figure className="w-[18rem] mx-auto my-5">
         <img
           src={project.image}
