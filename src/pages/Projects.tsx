@@ -19,7 +19,6 @@ interface Projects extends Project {
 
 const Projects = () => {
   const [projects, setProjects] = useState<Projects[]>([]);
-  const [showAll, setShowAll] = useState(true);
 
   const fetchProjects = async () => {
     try {
@@ -29,7 +28,6 @@ const Projects = () => {
         ...doc.data(),
         id: doc.id,
       })) as Projects[];
-      console.log("data", data);
       const sortedProjects = sortProjects(data);
       setProjects(sortedProjects);
     } catch (error) {

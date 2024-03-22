@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer
       className="absolute right-0 left-0 bottom-0 pb-3 bg-slate-200"
-      style={{ background: theme.bg2 }}
+      // style={{ background: theme.bg2 }}
     >
       <div className="w-8/12 mx-auto flex justify-center items-center gap-5 mt-2 flex-col">
         <div className="flex flex-col items-center">

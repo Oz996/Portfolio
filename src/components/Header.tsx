@@ -6,6 +6,7 @@ import { getAuth, signOut } from "firebase/auth";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { useTheme } from "../hooks/useTheme";
 import { toast } from "react-toastify";
+import classNames from "classnames";
 
 const Header = () => {
   const [hamburger, setHamburger] = useState(false);
@@ -57,51 +58,42 @@ const Header = () => {
         />
         <ul
           ref={navRef}
-          className={`w-8/12 mx-auto flex font-semibold ${
-            !darkTheme
-              ? "max-sm:bg-white"
-              : "max-sm:bg-gray-950 max-sm:border-none"
-          } ${
-            hamburger &&
-            "max-sm:flex-col max-sm:p-5  max-sm:absolute max-sm:left-8 z-10 max-sm:w-40 rounded max-sm:shadow-lg max-sm:border max-sm:gap-2 max-sm:text-xl"
-          }`}
+          className={classNames({
+            "w-8/12 mx-auto flex gap-5 font-semibold": true,
+            "max-sm:bg-gray-950 max-sm:border-none": darkTheme,
+            "max-sm:bg-white": !darkTheme,
+            "max-sm:flex-col max-sm:p-5  max-sm:absolute max-sm:left-8 z-10 max-sm:w-40 rounded max-sm:shadow-lg max-sm:border max-sm:gap-2 max-sm:text-xl":
+              hamburger,
+          })}
         >
           <li>
             <NavLink
               to="/"
-              className="hover:text-purple-300 duration-200"
+              className="hover:text-purple-300 duration-300"
               onClick={closeNavMenu}
             >
               Home
             </NavLink>
           </li>
-          <div className="flex w-8/12 mx-auto gap-10 max-sm:flex-col max-sm:mx-0 max-sm:gap-2">
-            <li>
-              <NavLink
-                to="projects"
-                className="hover:text-purple-300 duration-200"
-                onClick={closeNavMenu}
-              >
-                Projects
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                to="clones"
-                className="hover:text-purple-300 duration-200"
-                onClick={closeNavMenu}
-              >
-                Clones
-              </NavLink>
-            </li>
-          </div>
+          <li>
+            <NavLink
+              to="projects"
+              className="hover:text-purple-300 duration-300"
+              onClick={closeNavMenu}
+            >
+              Projects
+            </NavLink>
+          </li>
+          <div className="flex w-8/12 mx-auto gap-10 max-sm:flex-col max-sm:mx-0 max-sm:gap-2"></div>
           <div>
             {!isLoggedIn ? (
               <li>
                 <NavLink
-                  className={`bg-purple-400 p-2 px-4 rounded hover:bg-purple-300 duration-300 text-white max-sm:bg-inherit ${
-                    !darkTheme && "max-sm:text-black"
-                  } max-sm:p-0 max-sm:hover:text-purple-300 max-sm:hover:bg-inherit`}
+                  className={classNames({
+                    "bg-purple-400 p-2 px-4 rounded hover:bg-purple-300 duration-300 text-white max-sm:bg-inherit max-sm:p-0 max-sm:hover:text-purple-300 max-sm:hover:bg-inherit":
+                      true,
+                    "max-sm:text-black": !darkTheme,
+                  })}
                   to="/login"
                   onClick={closeNavMenu}
                 >
@@ -111,9 +103,11 @@ const Header = () => {
             ) : (
               <li>
                 <span
-                  className={`bg-purple-400 p-2 px-4 rounded hover:bg-purple-300 duration-300 text-white cursor-pointer max-sm:bg-inherit ${
-                    !darkTheme && "max-sm:text-black"
-                  } max-sm:p-0 max-sm:hover:text-purple-300 max-sm:hover:bg-inherit`}
+                  className={classNames({
+                    "bg-purple-400 p-2 px-4 rounded hover:bg-purple-300 duration-300 text-white cursor-pointer max-sm:bg-inherit max-sm:p-0 max-sm:hover:text-purple-300 max-sm:hover:bg-inherit":
+                      true,
+                    "max-sm:text-black": !darkTheme,
+                  })}
                   onClick={() => {
                     handleLogout();
                     closeNavMenu();

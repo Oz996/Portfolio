@@ -27,9 +27,9 @@ const ProjectCard = ({ project }: props) => {
           to={project.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-slate-800 hover:bg-white hover:text-black text-white duration-300 p-2 rounded"
+          className="bg-slate-800 hover:bg-white hover:text-black text-white duration-300 p-2 rounded fontsem"
         >
-          View Website
+          Visit Website
         </Link>
         <Link
           to={project.github}
@@ -37,7 +37,7 @@ const ProjectCard = ({ project }: props) => {
           rel="noopener noreferrer"
           className="flex items-end text-white gap-1 hover:underline-offset-8 hover:opacity-80 cursor-pointer mr-2  duration-300"
         >
-          <BsGithub size={30} className="text-white cursor-pointer" />
+          <BsGithub size={27} className="text-white cursor-pointer" />
           Github
         </Link>
       </div>
