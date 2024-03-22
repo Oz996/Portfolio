@@ -70,7 +70,7 @@ const Home = () => {
         </div>
       </div>
       <div className="w-3/12 mt-[10rem] ml-[11vw] text-cyan-400 max-sm:mx-auto max-sm:my-0 max-sm:ml-0">
-        <FaReact size={400} className="animate-rotate max-sm:w-[20rem]" />
+        <FaReact size={400} className="animate-rotate max-sm:w-[15rem]" />
       </div>
     </main>
   );

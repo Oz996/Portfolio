@@ -4,15 +4,21 @@ import { Outlet, NavLink } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 import { getAuth, signOut } from "firebase/auth";
 import { RxHamburgerMenu } from "react-icons/rx";
+import { IoMdClose } from "react-icons/io";
 import { useTheme } from "../hooks/useTheme";
 import { toast } from "react-toastify";
+import { useMediaQuery } from "@uidotdev/usehooks";
 import classNames from "classnames";
 
 const Header = () => {
-  const [hamburger, setHamburger] = useState(false);
+  const [mobileNav, setMobileNav] = useState(false);
   const { darkTheme, setDarkTheme } = useTheme();
   const { isLoggedIn, signOutUser } = useAuth();
   const navRef = useRef<HTMLUListElement | null>(null);
+
+  const isMobile = useMediaQuery("only screen and (max-width: 640px)");
+
+  console.log(isMobile);
 
   const handleLogout = () => {
     const auth = getAuth();
@@ -26,44 +32,43 @@ const Header = () => {
   };
 
   const closeNavMenu = () => {
-    setHamburger(false);
+    setMobileNav(false);
   };
 
   useEffect(() => {
     document.addEventListener("mousedown", (e) => {
       if (navRef.current && !navRef.current.contains(e.target as Node)) {
-        setHamburger(false);
+        setMobileNav(false);
       }
     });
   }, []);
 
-  useEffect(() => {
-    if (navRef.current) {
-      if (hamburger) {
-        navRef.current.classList.remove("max-sm:hidden");
-        navRef.current.classList.add("max-sm:flex");
-      } else {
-        navRef.current.classList.add("max-sm:hidden");
-        navRef.current.classList.remove("max-sm:flex");
-      }
-    }
-  }, [hamburger]);
   return (
     <>
       <nav className="border-b border-gray-300 py-5 h-16">
-        <RxHamburgerMenu
-          size={25}
-          className="hidden max-sm:block ml-16 cursor-pointer"
-          onClick={() => setHamburger((prev) => !prev)}
-        />
+        {isMobile && !mobileNav && (
+          <RxHamburgerMenu
+            size={25}
+            className="ml-16 cursor-pointer"
+            onClick={() => setMobileNav(true)}
+          />
+        )}
+        {isMobile && mobileNav && (
+          <IoMdClose
+            size={25}
+            className="ml-16 cursor-pointer"
+            onClick={() => setMobileNav(false)}
+          />
+        )}
         <ul
           ref={navRef}
           className={classNames({
-            "w-8/12 mx-auto flex gap-5 font-semibold": true,
+            "w-8/12 mx-auto gap-5 font-semibold flex": true,
+            " max-sm:hidden": isMobile && !mobileNav,
             "max-sm:bg-gray-950 max-sm:border-none": darkTheme,
             "max-sm:bg-white": !darkTheme,
-            "max-sm:flex-col max-sm:p-5  max-sm:absolute max-sm:left-8 z-10 max-sm:w-40 rounded max-sm:shadow-lg max-sm:border max-sm:gap-2 max-sm:text-xl":
-              hamburger,
+            "max-sm:flex-col max-sm:p-5 max-sm:absolute top-[3.5rem] left-0 right-0 w-full z-10 rounded max-sm:shadow-lg max-sm:border max-sm:gap-2 max-sm:text-lg text-center":
+              mobileNav && isMobile,
           })}
         >
           <li>
@@ -84,7 +89,9 @@ const Header = () => {
               Projects
             </NavLink>
           </li>
-          <div className="flex w-8/12 mx-auto gap-10 max-sm:flex-col max-sm:mx-0 max-sm:gap-2"></div>
+          {!isMobile && (
+            <div className="flex w-8/12 mx-auto gap-10 max-sm:flex-col max-sm:mx-0 max-sm:gap-2"></div>
+          )}
           <div>
             {!isLoggedIn ? (
               <li>
@@ -119,7 +126,7 @@ const Header = () => {
               </li>
             )}
           </div>
-          <div className="ml-3 max-sm:m-0">
+          <div className="max-sm:m-0 self-center">
             {!darkTheme ? (
               <BsSunFill
                 onClick={() => setDarkTheme(true)}
