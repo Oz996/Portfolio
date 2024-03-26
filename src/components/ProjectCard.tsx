@@ -10,11 +10,7 @@ const ProjectCard = ({ project }: props) => {
   return (
     <article className="w-[21rem] h-[34rem] bg-slate-800 rounded-xl shadow-lg shadow-gray-600 grid grid-rows-3 mx-auto">
       <figure className="w-[18rem] mx-auto my-5">
-        <img
-          src={project.image}
-          alt={project.title}
-          className="border border-black rounded"
-        />
+        <img src={project.image} alt={project.title} className="rounded" />
       </figure>
       <div className="w-10/12 mx-auto">
         <h2 className="font-semibold text-white text-center bg-slate-600">

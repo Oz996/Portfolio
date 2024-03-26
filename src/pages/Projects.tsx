@@ -26,23 +26,25 @@ const Projects = () => {
         ...doc.data(),
         id: doc.id,
       })) as Projects[];
+
       const sortedProjects = sortProjects(data);
-      setProjects(sortedProjects);
+      const projectsToDisplay = sortedProjects.filter(
+        (project) => !project.isHidden
+      );
+      setProjects(projectsToDisplay);
     } catch (error) {
       console.error(error);
     }
   };
-
-  useEffect(() => {
-    fetchProjects();
-  }, [db]);
 
   const sortProjects = (arr: Projects[]) => {
     const sorted = arr.slice().sort((a, b) => a.orderId - b.orderId);
     return sorted;
   };
 
-  // const displayedProjects = showAll ? projects : projects.slice(0, 3);
+  useEffect(() => {
+    fetchProjects();
+  }, [db]);
 
   return (
     <section className="w-8/12 mx-auto mb-10 max-sm:w-full">

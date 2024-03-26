@@ -13,4 +13,5 @@ export interface Project {
   image: string;
   link: string;
   github: string;
+  isHidden?: boolean;
 }
