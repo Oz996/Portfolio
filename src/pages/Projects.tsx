@@ -49,13 +49,23 @@ const Projects = () => {
   return (
     <section className="w-8/12 mx-auto mb-10 max-sm:w-full">
       <div className="flex gap-8 justify-center mt-10 max-sm:hidden fade-in">
-        <img src={html} alt="html-logo" className="w-12" />
-        <img src={css} alt="css-logo" className="w-12" />
-        <img src={query} alt="react-query-logo" className="w-12" />
-        <FaReact size={100} className="text-cyan-400" />
-        <img src={redux} alt="redux-logo" className="w-12" />
-        <img src={scss} alt="scss-logo" className="w-12" />
-        <img src={tailwind} alt="tailwind-logo" className="w-12" />
+        <img src={html} title="HTML" alt="html-logo" className="w-12" />
+        <img src={css} title="CSS" alt="css-logo" className="w-12" />
+        <img
+          src={query}
+          title="Tanstack Query"
+          alt="react-query-logo"
+          className="w-12"
+        />
+        <FaReact size={100} title="React" className="text-cyan-400" />
+        <img src={redux} title="Redux" alt="redux-logo" className="w-12" />
+        <img src={scss} title="Scss" alt="scss-logo" className="w-12" />
+        <img
+          src={tailwind}
+          title="Tailwind"
+          alt="tailwind-logo"
+          className="w-12"
+        />
       </div>
       <div className="grid grid-cols-3 gap-10 mt-10 max-md:flex max-md:flex-col max-xl:grid-cols-2 slide-up">
         {projects.map((project) => (
