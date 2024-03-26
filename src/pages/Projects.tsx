@@ -4,14 +4,12 @@ import scss from "/scss.svg";
 import tailwind from "/tailwind.svg";
 import query from "/react-query.svg";
 import redux from "/redux.svg";
-import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 import { FaReact } from "react-icons/fa";
 import ProjectCard from "../components/ProjectCard";
 import { collection, getDocs } from "firebase/firestore";
 import { Project } from "../types/types";
 import { useEffect, useState } from "react";
 import { db } from "../firebase";
-import { scrollToBottom, scrollToTop } from "../utils/scrolls";
 
 interface Projects extends Project {
   id: string;
@@ -48,7 +46,7 @@ const Projects = () => {
 
   return (
     <section className="w-8/12 mx-auto mb-10 max-sm:w-full">
-      <div className="flex gap-8 justify-center mt-10 max-sm:hidden fade-in">
+      <div className="flex gap-8 justify-center mt-10 max-sm:hidden animate-fade-in">
         <img src={html} title="HTML" alt="html-logo" className="w-12" />
         <img src={css} title="CSS" alt="css-logo" className="w-12" />
         <img
@@ -67,7 +65,7 @@ const Projects = () => {
           className="w-12"
         />
       </div>
-      <div className="grid grid-cols-3 gap-10 mt-10 max-md:flex max-md:flex-col max-xl:grid-cols-2 slide-up">
+      <div className="grid grid-cols-3 gap-10 mt-10 max-md:flex max-md:flex-col max-xl:grid-cols-2 animate-slide-up">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
