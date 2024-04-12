@@ -8,7 +8,7 @@ interface props {
 
 const ProjectCard = ({ project }: props) => {
   return (
-    <article className="max-w-[21rem] h-[34rem] bg-slate-800 rounded-xl shadow-lg shadow-gray-600 grid grid-rows-3">
+    <article className="max-w-[21rem] h-[34rem] bg-slate-800 rounded-xl shadow-lg shadow-gray-600 grid grid-rows-3 text-white mx-auto">
       <img
         src={project.image}
         alt={project.title}
@@ -19,14 +19,14 @@ const ProjectCard = ({ project }: props) => {
         <h2 className="font-semibold text-white text-center bg-slate-600">
           {project.title}
         </h2>
-        <p className="text-white mt-5">{project.description}</p>
+        <p className="mt-5">{project.description}</p>
       </div>
       <div className="w-10/12 mx-auto relative top-16 flex justify-between items-center mb-8">
         <Link
           to={project.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-slate-800 hover:bg-white hover:text-black text-white duration-300 p-2 rounded fontsem"
+          className="bg-slate-800 hover:bg-white hover:text-black duration-300 p-2 rounded fontsem"
         >
           Visit Website
         </Link>
@@ -34,9 +34,9 @@ const ProjectCard = ({ project }: props) => {
           to={project.github}
           target="_blank"
           rel="noopener noreferrer"
-          className="flex items-end text-white gap-1 hover:underline-offset-8 hover:opacity-80 cursor-pointer mr-2  duration-300"
+          className="flex items-end gap-1 hover:underline-offset-8 hover:opacity-80 cursor-pointer mr-2  duration-300"
         >
-          <BsGithub size={27} className="text-white cursor-pointer" />
+          <BsGithub size={27} className="cursor-pointer" />
           Github
         </Link>
       </div>

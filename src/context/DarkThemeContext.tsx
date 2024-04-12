@@ -3,13 +3,16 @@ import { createContext, useState, ReactElement } from "react";
 interface Theme {
   darkTheme: boolean;
   setDarkTheme: (value: boolean) => void;
-  theme: string | { ui: string; bg: string;};
+  theme: { ui: string; bg: string };
 }
 
 const initialState: Theme = {
   darkTheme: false,
   setDarkTheme: () => {},
-  theme: "",
+  theme: {
+    ui: "",
+    bg: "",
+  },
 };
 
 export const DarkThemeContext = createContext(initialState);
@@ -29,7 +32,9 @@ export const DarkThemeContextProvider = ({
   const theme = darkTheme ? dark : "";
 
   return (
-    <DarkThemeContext.Provider value={{ darkTheme, setDarkTheme, theme }}>
+    <DarkThemeContext.Provider
+      value={{ darkTheme, setDarkTheme, theme } as any}
+    >
       {children}
     </DarkThemeContext.Provider>
   );

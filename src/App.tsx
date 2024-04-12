@@ -17,14 +17,13 @@ const App = () => {
     if (typeof theme === "string") {
       document.body.style.background = theme;
     } else {
-      document.body.style.backgroundColor = theme.bg; 
+      document.body.style.backgroundColor = theme.bg;
     }
   }, [theme]);
   return (
     <main
       style={{
         color: theme.ui,
-        height: "100vh",
       }}
     >
       <Routes>
