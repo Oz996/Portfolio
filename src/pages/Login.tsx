@@ -65,7 +65,7 @@ const Login = () => {
     setDarkTheme(false);
   }, []);
   return (
-    <section className="min-h-full bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-300 pt-20">
+    <section className="h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-300 pt-20">
       <div className="max-w-[27rem] mx-auto flex flex-col gap-10 pt-20">
         <form
           className="flex flex-col gap-2 p-10 bg-white rounded"
