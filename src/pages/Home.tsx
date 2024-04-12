@@ -14,7 +14,7 @@ const Home = () => {
           <h2 className="text-3xl font-bold text-purple-400 animate-slide-left">
             Frontend Developer
           </h2>
-          <p className="w-[32rem] font leading-7 mt-2 mb-5 max-sm:w-11/12 animate-slide-left poppins">
+          <p className="w-[32rem] max-sm:text-[15px] leading-7 mt-2 mb-5 max-sm:w-11/12 animate-slide-left poppins">
             Hi and welcome to my portfolio! Take a look at some of the projects
             and clones I've developed in my free time. I'm currently a student
             at KYH, eager to learn more and advance as a developer. Born and
@@ -36,7 +36,7 @@ const Home = () => {
         </div>
         <div className="flex gap-5 justify-start mt-10 animate-fade-in-slow">
           <Link to="/projects">
-            <button className="p-2 px-5 text-white hover:bg-white hover:text-black border border-transparent hover:border-gray-600 duration-300 bg-purple-400 rounded font-semibold text-lg">
+            <button className="p-2 px-5 text-white hover:bg-white hover:text-black border border-transparent hover:border-gray-600 duration-300 bg-purple-400 rounded font-semibold text-lg active:text-white active:bg-purple-400 active:border-transparent active:duration-75">
               Projects
             </button>
           </Link>
@@ -69,7 +69,7 @@ const Home = () => {
           </Link>
         </div>
       </div>
-      <div className="w-3/12 mt-[10rem] ml-[11vw] text-cyan-400 max-sm:mx-auto max-sm:my-0 max-sm:ml-0">
+      <div className="w-3/12 mt-[10rem] ml-[11vw] text-cyan-400 max-sm:mx-auto max-sm:my-0 max-sm:ml-0 tex">
         <FaReact size={400} className="animate-rotate max-sm:w-[15rem]" />
       </div>
     </main>

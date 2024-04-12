@@ -49,14 +49,14 @@ const Header = () => {
         {isMobile && !mobileNav && (
           <RxHamburgerMenu
             size={25}
-            className="ml-16 cursor-pointer"
+            className="ml-5 cursor-pointer"
             onClick={() => setMobileNav(true)}
           />
         )}
         {isMobile && mobileNav && (
           <IoMdClose
             size={25}
-            className="ml-16 cursor-pointer"
+            className="ml-5 cursor-pointer"
             onClick={() => setMobileNav(false)}
           />
         )}
@@ -71,19 +71,27 @@ const Header = () => {
               mobileNav && isMobile,
           })}
         >
-          <li>
+          <li className="relative">
             <NavLink
               to="/"
-              className="hover:text-purple-300 duration-300"
+              className={classNames({
+                "hover:text-purple-950 duration-300": true,
+                "after:absolute after:left-0 after:bottom-0 after:w-full after:h-[0.1rem] after:rounded-full after:bg-purple-400 after:scale-x-0 hover:after:scale-x-100 after:duration-300":
+                  !isMobile,
+              })}
               onClick={closeNavMenu}
             >
               Home
             </NavLink>
           </li>
-          <li>
+          <li className="relative">
             <NavLink
               to="projects"
-              className="hover:text-purple-300 duration-300"
+              className={classNames({
+                "hover:text-purple-950 duration-300": true,
+                "after:absolute after:left-0 after:bottom-0 after:w-full after:h-[0.1rem] after:rounded-full after:bg-purple-400 after:scale-x-0 hover:after:scale-x-100 after:duration-300":
+                  !isMobile,
+              })}
               onClick={closeNavMenu}
             >
               Projects
