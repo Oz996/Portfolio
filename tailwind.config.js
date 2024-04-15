@@ -36,7 +36,7 @@ export default {
         rotate: "rotate 2s ease",
       },
       content: {
-        arrow: "url('/public/Arrow.svg')",
+        arrow: "url('/Arrow.svg')",
       },
     },
   },
