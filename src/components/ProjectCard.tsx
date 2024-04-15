@@ -22,6 +22,7 @@ const ProjectCard = ({ project }: props) => {
         <div className="flex gap-1 h-9 mt-3">
           {project?.stack?.map((icon) => (
             <img
+              key={icon}
               src={`/${icon}.svg`}
               alt={icon}
               title={icon}
