@@ -1,8 +1,3 @@
-import html from "/html.svg";
-import css from "/css.svg";
-import sass from "/Sass.svg";
-import query from "/Tanstack Query.svg";
-import redux from "/Redux Toolkit.svg";
 import { FaReact } from "react-icons/fa";
 import ProjectCard from "../components/ProjectCard";
 import { collection, getDocs } from "firebase/firestore";
@@ -48,24 +43,24 @@ const Projects = () => {
   return (
     <section className="w-8/12 mx-auto mb-10 max-sm:w-full">
       <div className="flex gap-8 justify-center mt-10 max-sm:hidden animate-fade-in">
-        <img src={html} title="HTML" alt="html-logo" className="w-12" />
-        <img src={css} title="CSS" alt="css-logo" className="w-12" />
+        <img src="/html.svg" title="HTML" alt="html-logo" className="w-12" />
+        <img src="/css.svg" title="CSS" alt="css-logo" className="w-12" />
         <img
-          src={query}
+          src="/Tanstack Query.svg"
           title="Tanstack Query"
           alt="react-query-logo"
           className="w-12"
         />
         <FaReact size={100} title="React" className="text-cyan-400" />
         <img
-          src={redux}
+          src="/Redux Toolkit.svg"
           title="Redux Toolkit"
           alt="redux-logo"
           className="w-12"
         />
-        <img src={sass} title="Sass" alt="scss-logo" className="w-12" />
+        <img src="/Sass.svg" title="Sass" alt="scss-logo" className="w-12" />
         <img
-          src={"/Tailwind.svg"}
+          src="/Tailwind.svg"
           title="Tailwind"
           alt="tailwind-logo"
           className="w-12"
