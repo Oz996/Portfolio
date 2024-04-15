@@ -1,6 +1,7 @@
 import { BsGithub } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { Project } from "../types/types";
+import classNames from "classnames";
 
 interface props {
   project: Project;
@@ -14,12 +15,21 @@ const ProjectCard = ({ project }: props) => {
         alt={project.title}
         className="rounded w-[85%] lg:w-[17rem] mx-auto pt-5"
       />
-
       <div className="w-10/12 mx-auto">
         <h2 className="font-semibold text-white text-center bg-slate-600">
           {project.title}
         </h2>
-        <p className="mt-5">{project.description}</p>
+        <div className="flex gap-1 h-9 mt-3">
+          {project?.stack?.map((icon) => (
+            <img
+              src={`/${icon}.svg`}
+              alt={icon}
+              title={icon}
+              className="hover:scale-105 duration-200"
+            />
+          ))}
+        </div>
+        <p className="mt-3">{project.description}</p>
       </div>
       <div className="w-10/12 mx-auto relative top-16 flex justify-between items-center mb-8">
         <Link

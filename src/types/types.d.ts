@@ -14,4 +14,16 @@ export interface Project {
   link: string;
   github: string;
   isHidden?: boolean;
+  stack: Stack[];
 }
+type Stack =
+  | "Next.js"
+  | "Vite"
+  | "Pisma"
+  | "MongoDB"
+  | "Tailwind"
+  | "Sass"
+  | "Express"
+  | "NextAuth"
+  | "shadcn"
+  | "NextUI";

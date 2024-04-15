@@ -1,9 +1,9 @@
 import html from "/html.svg";
 import css from "/css.svg";
-import scss from "/scss.svg";
-import tailwind from "/tailwind.svg";
-import query from "/react-query.svg";
-import redux from "/redux.svg";
+import sass from "/Sass.svg";
+import tailwind from "/Tailwind.svg";
+import query from "/Tanstack Query.svg";
+import redux from "/Redux Toolkit.svg";
 import { FaReact } from "react-icons/fa";
 import ProjectCard from "../components/ProjectCard";
 import { collection, getDocs } from "firebase/firestore";
@@ -58,8 +58,13 @@ const Projects = () => {
           className="w-12"
         />
         <FaReact size={100} title="React" className="text-cyan-400" />
-        <img src={redux} title="Redux" alt="redux-logo" className="w-12" />
-        <img src={scss} title="Scss" alt="scss-logo" className="w-12" />
+        <img
+          src={redux}
+          title="Redux Toolkit"
+          alt="redux-logo"
+          className="w-12"
+        />
+        <img src={sass} title="Sass" alt="scss-logo" className="w-12" />
         <img
           src={tailwind}
           title="Tailwind"
