@@ -36,7 +36,12 @@ const ProjectCard = ({ project }: props) => {
           to={project.link}
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-slate-800 hover:bg-white hover:text-black duration-300 p-2 rounded fontsem"
+          className={classNames({
+            "bg-slate-800 hover:bg-slate-700 active:bg-slate-800 active:duration-100 hover:px-3 hover:pr-8 duration-300 py-2 rounded-lg":
+              true,
+            "hover:after:content-arrow hover:after:animate-fade-in-fast after:absolute after:left-[38.5%] after:top-[44%]":
+              true,
+          })}
         >
           Visit Website
         </Link>

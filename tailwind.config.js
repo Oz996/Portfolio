@@ -32,7 +32,11 @@ export default {
         "slide-up": "slide-in-up 1.2s ease",
         "fade-in": "fade-in 3.5s ease",
         "fade-in-slow": "fade-in 5s ease",
+        "fade-in-fast": "fade-in 1.3s ease",
         rotate: "rotate 2s ease",
+      },
+      content: {
+        arrow: "url('/public/Arrow.svg')",
       },
     },
   },
