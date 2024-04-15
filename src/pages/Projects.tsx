@@ -1,7 +1,6 @@
 import html from "/html.svg";
 import css from "/css.svg";
 import sass from "/Sass.svg";
-import tailwind from "/Tailwind.svg";
 import query from "/Tanstack Query.svg";
 import redux from "/Redux Toolkit.svg";
 import { FaReact } from "react-icons/fa";
@@ -66,7 +65,7 @@ const Projects = () => {
         />
         <img src={sass} title="Sass" alt="scss-logo" className="w-12" />
         <img
-          src={tailwind}
+          src={"/Tailwind.svg"}
           title="Tailwind"
           alt="tailwind-logo"
           className="w-12"
