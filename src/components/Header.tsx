@@ -4,6 +4,8 @@ import { Outlet, NavLink } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 import { getAuth, signOut } from "firebase/auth";
 import { RxHamburgerMenu } from "react-icons/rx";
+import Hamburger from "/icon-hamburger.svg";
+import Close from "/icon-close.svg";
 import { IoMdClose } from "react-icons/io";
 import { useTheme } from "../hooks/useTheme";
 import { toast } from "react-toastify";
@@ -47,15 +49,17 @@ const Header = () => {
     <>
       <nav className="border-b border-gray-300 py-5 h-16">
         {isMobile && !mobileNav && (
-          <RxHamburgerMenu
-            size={25}
+          <img
+            src={Hamburger}
+            alt="Open navigation menu"
             className="ml-5 cursor-pointer"
             onClick={() => setMobileNav(true)}
           />
         )}
         {isMobile && mobileNav && (
-          <IoMdClose
-            size={25}
+          <img
+            src={Close}
+            alt="Close navigation menu"
             className="ml-5 cursor-pointer"
             onClick={() => setMobileNav(false)}
           />
@@ -67,7 +71,7 @@ const Header = () => {
             " max-sm:hidden": isMobile && !mobileNav,
             "max-sm:bg-gray-950 max-sm:border-none": darkTheme,
             "max-sm:bg-white": !darkTheme,
-            "max-sm:flex-col max-sm:p-5 max-sm:absolute top-[3.5rem] left-0 right-0 w-full z-10 rounded max-sm:shadow-lg max-sm:border max-sm:gap-2 max-sm:text-lg text-center":
+            "max-sm:flex-col max-sm:p-5 max-sm:absolute top-[3.5rem] left-0 right-0 w-full z-10 rounded max-sm:shadow-lg max-sm:border max-sm:gap-2 max-sm:text-lg text-center animate-slide-down":
               mobileNav && isMobile,
           })}
         >
@@ -105,7 +109,7 @@ const Header = () => {
               <li>
                 <NavLink
                   className={classNames({
-                    "bg-purple-400 p-2 px-4 rounded hover:bg-purple-300 duration-300 text-white max-sm:bg-inherit max-sm:p-0 max-sm:hover:text-purple-300 max-sm:hover:bg-inherit":
+                    "bg-purple-500 p-2 px-4 rounded hover:bg-purple-600 active:bg-purple-400 active:duration-75 duration-300 text-white max-sm:bg-inherit max-sm:p-0 max-sm:hover:text-purple-950 max-sm:hover:bg-inherit":
                       true,
                     "max-sm:text-black": !darkTheme,
                   })}
@@ -119,7 +123,7 @@ const Header = () => {
               <li>
                 <span
                   className={classNames({
-                    "bg-purple-400 p-2 px-4 rounded hover:bg-purple-300 duration-300 text-white cursor-pointer max-sm:bg-inherit max-sm:p-0 max-sm:hover:text-purple-300 max-sm:hover:bg-inherit":
+                    "bg-purple-500 p-2 px-4 rounded hover:bg-purple-600 active:bg-purple-400 active:duration-75 duration-300 text-white cursor-pointer max-sm:bg-inherit max-sm:p-0 max-sm:hover:text-purple-950 max-sm:hover:bg-inherit":
                       true,
                     "max-sm:text-black": !darkTheme,
                   })}

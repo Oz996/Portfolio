@@ -18,6 +18,10 @@ export default {
           from: { transform: "translateY(5%)", opacity: "10%" },
           to: { transform: "translateY(0)", opacity: "100%" },
         },
+        "slide-in-down": {
+          from: { transform: "translateY(-10%)" },
+          to: { transform: "translateY(0)" },
+        },
         "fade-in": {
           from: { opacity: "0" },
           to: { opacity: "100%" },
@@ -30,6 +34,7 @@ export default {
       animation: {
         "slide-left": "slide-in-left 1.5s ease",
         "slide-up": "slide-in-up 1.2s ease",
+        "slide-down": "slide-in-down .3s ease",
         "fade-in": "fade-in 3.5s ease",
         "fade-in-slow": "fade-in 5s ease",
         "fade-in-fast": "fade-in 1.3s ease",
