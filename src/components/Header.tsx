@@ -79,7 +79,8 @@ const Header = () => {
             <NavLink
               to="/"
               className={classNames({
-                "hover:text-purple-950 duration-300": true,
+                "hover:text-purple-950 duration-300": !darkTheme,
+                "hover:text-purple-400 duration-300": darkTheme,
                 "after:absolute after:left-0 after:bottom-0 after:w-full after:h-[0.1rem] after:rounded-full after:bg-purple-400 after:scale-x-0 hover:after:scale-x-100 after:duration-300":
                   !isMobile,
               })}
@@ -92,7 +93,8 @@ const Header = () => {
             <NavLink
               to="projects"
               className={classNames({
-                "hover:text-purple-950 duration-300": true,
+                "hover:text-purple-950 duration-300": !darkTheme,
+                "hover:text-purple-400 duration-300": darkTheme,
                 "after:absolute after:left-0 after:bottom-0 after:w-full after:h-[0.1rem] after:rounded-full after:bg-purple-400 after:scale-x-0 hover:after:scale-x-100 after:duration-300":
                   !isMobile,
               })}

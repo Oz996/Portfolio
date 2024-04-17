@@ -2,14 +2,22 @@ import { BsGithub } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import { Project } from "../types/types";
 import classNames from "classnames";
+import { useTheme } from "../hooks/useTheme";
 
 interface props {
   project: Project;
 }
 
 const ProjectCard = ({ project }: props) => {
+  const { darkTheme } = useTheme();
   return (
-    <article className="max-w-[21rem] h-[34rem] bg-slate-800 rounded-xl shadow-lg shadow-gray-600 grid grid-rows-3 text-white mx-auto">
+    <article
+      className={classNames({
+        "max-w-[21rem] h-[34rem] bg-slate-800 rounded-xl shadow-lg shadow-gray-600 grid grid-rows-3 text-white mx-auto":
+          true,
+        "shadow-md": darkTheme,
+      })}
+    >
       <img
         src={project.image}
         alt={project.title}

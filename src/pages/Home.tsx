@@ -1,9 +1,12 @@
+import classNames from "classnames";
 import { AiFillLinkedin } from "react-icons/ai";
 import { BsGithub } from "react-icons/bs";
 import { FaReact } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import { useTheme } from "../hooks/useTheme";
 
 const Home = () => {
+  const { darkTheme } = useTheme();
   return (
     <main className="flex w-8/12 mx-auto max-sm:w-11/12 max-sm:mx-5 duration-200 max-md:flex-col-reverse">
       <div className="flex flex-col h-[53rem] justify-center">
@@ -16,11 +19,10 @@ const Home = () => {
           </h2>
           <p className="w-[32rem] max-sm:text-[15px] leading-7 mt-2 mb-5 max-sm:w-11/12 animate-slide-left poppins">
             Hi and welcome to my portfolio! Take a look at some of the projects
-            and clones I've developed in my free time. I'm currently a student
-            at KYH, eager to learn more and advance as a developer. Born and
-            raised in Sweden. I'm fluent in both Swedish and English. Feel free
-            to explore my work and reach out if you have any questions or
-            opportunities.
+            I've developed in my free time. I'm currently a student at KYH,
+            eager to learn more and advance as a developer. Born and raised in
+            Sweden. I'm fluent in both Swedish and English. Feel free to explore
+            my work and reach out if you have any questions or opportunities.
           </p>
           <div className="flex gap-1 justify-start items-end w-7/12 cursor-pointer animate-fade-in">
             <Link
@@ -36,7 +38,16 @@ const Home = () => {
         </div>
         <div className="flex gap-5 justify-start mt-10 animate-fade-in-slow">
           <Link to="/projects">
-            <button className="p-2 px-5 text-white hover:bg-white hover:text-black border border-transparent hover:border-gray-600 duration-300 bg-purple-400 rounded font-semibold text-lg active:text-white active:bg-purple-400 active:border-transparent active:duration-75">
+            <button
+              className={classNames({
+                "p-2 px-5 text-white bg-purple-400 rounded font-semibold text-lg border border-transparent active:text-white active:bg-purple-400 active:border-transparent active:duration-75":
+                  true,
+                "hover:bg-white hover:text-black hover:border-gray-600 duration-300":
+                  !darkTheme,
+                "hover:bg-black hover:text-white hover:border-gray-300 duration-300":
+                  darkTheme,
+              })}
+            >
               Projects
             </button>
           </Link>
