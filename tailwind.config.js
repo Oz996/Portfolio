@@ -19,12 +19,12 @@ export default {
           to: { transform: "translateY(0)", opacity: "100%" },
         },
         "slide-in-down": {
-          from: { transform: "translateY(-10%)" },
-          to: { transform: "translateY(0)" },
+          from: { transform: "translateY(-10%)", opacity: 0 },
+          to: { transform: "translateY(0)", opacity: 1 },
         },
         "fade-in": {
-          from: { opacity: "0" },
-          to: { opacity: "100%" },
+          from: { opacity: 0 },
+          to: { opacity: 1 },
         },
         rotate: {
           from: { rotate: "0deg" },
