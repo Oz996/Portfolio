@@ -22,8 +22,8 @@ const AuthForm = ({
   handleChange,
   formData,
 }: props) => {
-  // Dynamic component that handles form for both signing in and registering a new user depending on
-  // what prop was sent
+  // Dynamic component that handles renders form for both signing in and registering a new user depending
+  // on what prop was sent
 
   if (type == "login")
     return (
@@ -54,21 +54,20 @@ const AuthForm = ({
                 className="p-[1rem] border-slate-200 bg-slate-200"
               />
             </div>
-            <p className="text-red-500">{error}</p>
+            <p className="text-red-500 h-0">{error}</p>
             <button
               type="submit"
               disabled={isLoading}
-              className={`bg-blue-500 hover:bg-blue-400 mt-5 p-3 text-white duration-200 
-          }`}
+              className="bg-blue-500 hover:bg-blue-400 mt-10 p-3 text-white duration-200"
             >
               {isLoading && <Loader />}
               Login
             </button>
             <p className="mt-10 text-center text-gray-400">
-              Not a member?{" "}
+              Not a member?
               <Link to="/register" className="text-indigo-500 underline">
                 Sign up
-              </Link>{" "}
+              </Link>
               now
             </p>
           </form>
@@ -129,18 +128,17 @@ const AuthForm = ({
                 className="p-[1rem] border-slate-200 bg-slate-200"
               />
             </div>
-            <p className="text-red-500">{error}</p>
+            <p className="text-red-500 h-0">{error}</p>
             <button
               type="submit"
               disabled={isLoading}
-              className={`bg-blue-500 hover:bg-blue-400 mt-5 p-3 text-white duration-200 
-                }`}
+              className="bg-blue-500 hover:bg-blue-400 mt-10 p-3 text-white duration-200"
             >
               {isLoading && <Loader />}
               Register
             </button>
             <p className="mt-10 text-center text-gray-400">
-              Already a member?{" "}
+              Already a member?
               <Link to="/login" className="text-indigo-500 underline">
                 Sign in
               </Link>
