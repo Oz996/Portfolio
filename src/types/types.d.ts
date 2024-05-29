@@ -16,10 +16,21 @@ export interface Project {
   isHidden?: boolean;
   stack: Stack[];
 }
+
+export interface LoginForm {
+  userName: string;
+  email: string;
+  password: string;
+}
+
+export interface RegisterForm extends LoginForm {
+  Cpassword: string;
+}
+
 type Stack =
   | "Next.js"
   | "Vite"
-  | "Pisma"
+  | "Prisma"
   | "MongoDB"
   | "Tailwind"
   | "Sass"

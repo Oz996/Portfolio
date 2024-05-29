@@ -1,22 +1,23 @@
 import { auth } from "../firebase";
 import { AuthError, signInWithEmailAndPassword } from "firebase/auth";
 import React, { ChangeEvent, useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 import { useTheme } from "../hooks/useTheme";
-import Loader from "../utils/Loader/Loader";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import AuthForm from "../components/AuthForm";
+import { LoginForm } from "../types/types";
 
 const Login = () => {
-  const initialState = {
+  const initialState: LoginForm = {
     userName: "",
     email: "",
     password: "",
   };
 
   const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [formData, setFormData] = useState(initialState);
+  const [formData, setFormData] = useState<LoginForm>(initialState);
   const [error, setError] = useState<string | null>(null);
 
   const navigate = useNavigate();
@@ -65,53 +66,13 @@ const Login = () => {
     setDarkTheme(false);
   }, []);
   return (
-    <section className="h-screen bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-300 pt-20">
-      <div className="max-w-[27rem] mx-auto flex flex-col gap-10 pt-20">
-        <form
-          className="flex flex-col gap-2 p-10 bg-white rounded"
-          onSubmit={handleLogin}
-        >
-          <h1 className="py-10 text-3xl font-bold text-center">Sign In</h1>
-          <div className="flex flex-col gap-2">
-            <label htmlFor="email">Email</label>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              onChange={handleChange}
-              className="p-[1rem] border-slate-200 bg-slate-200"
-            />
-          </div>
-          <div className="flex flex-col gap-2">
-            <label htmlFor="password">Password</label>
-            <input
-              type="password"
-              name="password"
-              id="password"
-              onChange={handleChange}
-              className="p-[1rem] border-slate-200 bg-slate-200"
-            />
-          </div>
-          <p className="text-red-500">{error}</p>
-          <button
-            type="submit"
-            disabled={isLoading}
-            className={`bg-blue-500 hover:bg-blue-400 mt-5 p-3 text-white duration-200 
-          }`}
-          >
-            {isLoading && <Loader />}
-            Login
-          </button>
-          <p className="mt-10 text-center text-gray-400">
-            Not a member?{" "}
-            <Link to="/register" className="text-indigo-500 underline">
-              Sign up
-            </Link>{" "}
-            now
-          </p>
-        </form>
-      </div>
-    </section>
+    <AuthForm
+      type="login"
+      error={error}
+      isLoading={isLoading}
+      handleChange={handleChange}
+      handleLogin={handleLogin}
+    />
   );
 };
 
