@@ -31,6 +31,7 @@ const Login = () => {
         [e.target.name]: e.target.value,
       };
     });
+    setError(null);
   };
 
   const handleLogin = (e: React.FormEvent) => {

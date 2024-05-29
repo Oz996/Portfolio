@@ -30,6 +30,13 @@ export default {
           from: { rotate: "0deg" },
           to: { rotate: "360deg" },
         },
+        shake: {
+          from: { transform: "none" },
+          "25%": { transform: "translateX(3%)" },
+          "50%": { transform: "translateX(-3%)" },
+          "75%": { transform: "translateX(3%)" },
+          to: { transform: "none" },
+        },
       },
       animation: {
         "slide-left": "slide-in-left 1.5s ease",
@@ -39,6 +46,7 @@ export default {
         "fade-in-slow": "fade-in 5s ease",
         "fade-in-fast": "fade-in 1.3s ease",
         rotate: "rotate 2s ease",
+        shake: "shake .5s ease",
       },
       content: {
         arrow: "url('/Arrow.svg')",

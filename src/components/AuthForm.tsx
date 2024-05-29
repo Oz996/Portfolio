@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Loader from "../utils/Loader/Loader";
 import { ChangeEvent } from "react";
 import { RegisterForm } from "../types/types";
+import classNames from "classnames";
 
 interface props {
   type: "login" | "register";
@@ -33,7 +34,14 @@ const AuthForm = ({
             className="flex flex-col gap-2 p-10 bg-white rounded"
             onSubmit={handleLogin}
           >
-            <h1 className="py-10 text-3xl font-bold text-center">Sign In</h1>
+            <h1
+              className={classNames({
+                "py-10 text-3xl font-bold text-center duration-300": true,
+                "animate-shake text-red-500": error,
+              })}
+            >
+              Sign In
+            </h1>
             <div className="flex flex-col gap-2">
               <label htmlFor="email">Email</label>
               <input
@@ -64,10 +72,10 @@ const AuthForm = ({
               Login
             </button>
             <p className="mt-10 text-center text-gray-400">
-              Not a member?
+              Not a member?{" "}
               <Link to="/register" className="text-indigo-500 underline">
                 Sign up
-              </Link>
+              </Link>{" "}
               now
             </p>
           </form>
@@ -83,7 +91,14 @@ const AuthForm = ({
             className="flex flex-col gap-2 p-10 bg-white rounded opacity"
             onSubmit={handleNewUser}
           >
-            <h1 className="py-10 text-3xl font-bold text-center">Sign Up</h1>
+            <h1
+              className={classNames({
+                "py-10 text-3xl font-bold text-center duration-300": true,
+                "animate-shake text-red-500": error,
+              })}
+            >
+              Sign Up
+            </h1>
             <div className="flex flex-col gap-2">
               <label htmlFor="userName">Username</label>
               <input
@@ -138,7 +153,7 @@ const AuthForm = ({
               Register
             </button>
             <p className="mt-10 text-center text-gray-400">
-              Already a member?
+              Already a member?{" "}
               <Link to="/login" className="text-indigo-500 underline">
                 Sign in
               </Link>
