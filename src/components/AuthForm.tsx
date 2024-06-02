@@ -68,8 +68,7 @@ const AuthForm = ({
               disabled={isLoading}
               className="bg-blue-500 hover:bg-blue-400 mt-10 p-3 text-white duration-200"
             >
-              {isLoading && <Loader />}
-              Login
+              {isLoading && <Loader />} Login
             </button>
             <p className="mt-10 text-center text-gray-400">
               Not a member?{" "}
@@ -149,8 +148,7 @@ const AuthForm = ({
               disabled={isLoading}
               className="bg-blue-500 hover:bg-blue-400 mt-10 p-3 text-white duration-200"
             >
-              {isLoading && <Loader />}
-              Register
+              {isLoading && <Loader />} Register
             </button>
             <p className="mt-10 text-center text-gray-400">
               Already a member?{" "}
