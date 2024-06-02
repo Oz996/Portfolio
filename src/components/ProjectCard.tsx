@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Project } from "../types/types";
 import classNames from "classnames";
 import { useTheme } from "../hooks/useTheme";
+import TestIcon from "/Test.svg";
 
 interface props {
   project: Project;
@@ -27,16 +28,25 @@ const ProjectCard = ({ project }: props) => {
         <h2 className="font-semibold text-white text-center bg-slate-600">
           {project.title}
         </h2>
-        <div className="flex gap-1 h-9 mt-3">
-          {project?.stack?.map((icon) => (
+        <div className="flex justify-between items-center mt-3">
+          <div className="flex gap-1 h-9">
+            {project?.stack?.map((icon) => (
+              <img
+                key={icon}
+                src={`/${icon}.svg`}
+                alt={icon}
+                title={icon}
+                className="hover:scale-105 duration-200"
+              />
+            ))}
+          </div>
+          {project?.tests && (
             <img
-              key={icon}
-              src={`/${icon}.svg`}
-              alt={icon}
-              title={icon}
-              className="hover:scale-105 duration-200"
-            />
-          ))}
+              src={TestIcon}
+              className="w-9 h-9 text-blue-400 hover:scale-105 duration-200"
+              title="Includes unit, integration and mock testing"
+            ></img>
+          )}
         </div>
         <p className="mt-3">{project.description}</p>
       </div>

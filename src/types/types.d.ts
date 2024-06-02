@@ -15,6 +15,7 @@ export interface Project {
   github: string;
   isHidden?: boolean;
   stack: Stack[];
+  tests?: boolean;
 }
 
 export interface LoginForm {
