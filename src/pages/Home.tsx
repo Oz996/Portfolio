@@ -8,16 +8,16 @@ import { useTheme } from "../hooks/useTheme";
 const Home = () => {
   const { darkTheme } = useTheme();
   return (
-    <main className="flex w-8/12 mx-auto max-sm:w-11/12 max-sm:mx-5 duration-200 max-md:flex-col-reverse">
-      <div className="flex flex-col h-[53rem] justify-center">
-        <div className="flex flex-col justify-center">
+    <main className="flex w-8/12 h-screen mx-auto max-sm:w-11/12 max-sm:mx-5 duration-200 max-sm:pt-24">
+      <div className="flex flex-col pb-24 justify-center">
+        <div className="flex flex-col over">
           <h1 className="text-7xl font-semibold mb-6 max-sm:text-5xl animate-slide-left max-sm:mt-[-20vh]">
             Özgün Güven
           </h1>
           <h2 className="text-3xl font-bold text-purple-400 animate-slide-left">
             Frontend Developer
           </h2>
-          <p className="w-[32rem] max-sm:text-[15px] leading-7 mt-2 mb-5 max-sm:w-11/12 animate-slide-left poppins">
+          <p className="w-[32rem] max-sm:text-[15px] leading-7 mt-2 mb-5 max-sm:w-11/12 animate-slide-left poppins min-w-[19rem]">
             Hi and welcome to my portfolio! Take a look at some of the projects
             I've developed in my free time. I'm currently a student at KYH,
             eager to learn more and advance as a developer. Born and raised in
@@ -81,7 +81,7 @@ const Home = () => {
         </div>
       </div>
       <div className="w-3/12 mt-[10rem] ml-[11vw] text-cyan-400 max-sm:mx-auto max-sm:my-0 max-sm:ml-0 tex">
-        <FaReact size={400} className="animate-rotate max-sm:w-[15rem]" />
+        <FaReact size={400} className="animate-rotate max-md:hidden" />
       </div>
     </main>
   );

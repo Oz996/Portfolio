@@ -3,10 +3,8 @@ import { BsFillMoonFill, BsSunFill } from "react-icons/bs";
 import { Outlet, NavLink } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
 import { getAuth, signOut } from "firebase/auth";
-import { RxHamburgerMenu } from "react-icons/rx";
 import Hamburger from "/icon-hamburger.svg";
 import Close from "/icon-close.svg";
-import { IoMdClose } from "react-icons/io";
 import { useTheme } from "../hooks/useTheme";
 import { toast } from "react-toastify";
 import { useMediaQuery } from "@uidotdev/usehooks";
@@ -46,8 +44,8 @@ const Header = () => {
   }, []);
 
   return (
-    <>
-      <nav className="border-b border-gray-300 py-5 h-16">
+    <header>
+      <nav className="border-b border-gray-300 flex items-center h-16">
         {isMobile && !mobileNav && (
           <img
             src={Hamburger}
@@ -158,7 +156,7 @@ const Header = () => {
         </ul>
       </nav>
       <Outlet />
-    </>
+    </header>
   );
 };
 
